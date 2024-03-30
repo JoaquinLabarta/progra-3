@@ -4,7 +4,7 @@ public boolean esCapicua(ArrayList<Integer> lista)
 Ejemplo:
 ● El método devuelve verdadero si la secuencia ingresada es: 2 5 2
 ● El método devuelve falso si la secuencia ingresada es: 4 5 6 3 4 */
-package Ej7.Ej7f;
+
 
 import java.util.ArrayList;
 
