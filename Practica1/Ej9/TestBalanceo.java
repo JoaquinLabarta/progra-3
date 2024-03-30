@@ -1,4 +1,4 @@
-package Practica1.Ej9;
+package Ej9;
 
 import java.util.Stack;
 
