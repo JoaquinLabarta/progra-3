@@ -9,6 +9,7 @@ b) Implemente el método realizando un recorrido PostOrden. */
 package Practica2.Ej3;
 
 import Practica2.BinaryTree;
+import Practica2.Queue;
 
 public class Test {
     public static void main(String[] args) {
@@ -22,6 +23,9 @@ public class Test {
         arbol.getRightChild().addRightChild(new BinaryTree<Integer>(7));
         arbol.porNiveles(arbol);
         System.out.println();
-        System.out.println("Cantidad de pares: "+ContadorArbol.numerosPares(arbol));
+        
+        Queue<Integer> cola = new Queue<>();
+        ContadorArbol.numerosParesPostOrden(arbol,cola);
+        System.out.println(cola.toString());
     }
 }
