@@ -62,6 +62,51 @@ public class GeneralTree<T> {
 		}
 	}
 
+	/*
+	b) public int nivel(T dato) devuelve la profundidad o nivel del dato en el árbol. El nivel de un nodo
+	es la longitud del único camino de la raíz al nodo.
+	c) public int ancho(): int la amplitud (ancho) de un árbol se define como la cantidad de nodos que
+	se encuentran en el nivel que posee la mayor cantidad de nodos.
+	 */
+
+	 public int altura() {
+		int maxAlturaHijos = 0;
+		for (GeneralTree<T> hijo : this.getChildren()) {
+			int alturaHijo = hijo.altura();
+			if (alturaHijo > maxAlturaHijos) {
+				maxAlturaHijos = alturaHijo;
+			}
+		}
+		return maxAlturaHijos + 1;
+	}
+	
+	public int nivel(T dato) {
+		if(this!=null) {
+			if(this.getData()== dato) return 0;
+			int aux;
+			for(GeneralTree<T> nodo : this.getChildren()) {
+				aux=nodo.nivel(dato);
+				if(aux>=0)return aux+1;
+			}
+		}
+		return -1;
+	}
+	
+	public int ancho() {
+		if(this!=null) {
+			if(this.hasChildren()) {
+				int aux;
+				int max_ancho = this.getChildren().size();
+				for(GeneralTree<T> nodo : this.getChildren()) {
+					aux=nodo.ancho();
+					if(aux>max_ancho) max_ancho=aux;
+				}
+				return max_ancho;
+			}
+		}
+		return (this.isEmpty()?0:1);
+	}
+
     public List<T> porNiveles(GeneralTree<T> tree) {
         List<T> result = new LinkedList<T>();
         GeneralTree<T> tree_aux;

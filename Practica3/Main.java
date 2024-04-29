@@ -3,7 +3,7 @@ package Practica3;
 import java.util.LinkedList;
 import java.util.List;
 
-import Practica3.Ej2.RecorridoAG;
+import Practica3.Ej3.AnalizadorArbol;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Main {
         GeneralTree<Integer> a2 = new GeneralTree<Integer>(21, children2);
 
         List<GeneralTree<Integer>> children3 = new LinkedList<GeneralTree<Integer>>();
-        children3.add(new GeneralTree<Integer>(90));
+        children3.add(new GeneralTree<Integer>(1));
         GeneralTree<Integer> a3 = new GeneralTree<Integer>(23, children3);
 
         List<GeneralTree<Integer>> children4 = new LinkedList<GeneralTree<Integer>>();
@@ -27,11 +27,7 @@ public class Main {
         GeneralTree<Integer> a = new GeneralTree<Integer>(13, childen);
         System.out.println("Lista: " + a.porNiveles(a));
 
-        RecorridoAG ag = new RecorridoAG();
-        Integer n = 0;
-        System.out.println("Lista de elementos en el arbol mayores a "+n+": "+ag.numerosImparesMayoresQuePreOrden(a, n));
-        System.out.println("Lista de elementos en el arbol mayores a "+n+": "+ag.numerosImparesMayoresQuePostOrden(a, n));
-        System.out.println("Lista de elementos en el arbol mayores a "+n+": "+ag.numerosImparesMayoresQueInOrden(a, n));
-        System.out.println("Lista de elementos en el arbol mayores a "+n+": "+ag.numerosImparesMayoresQuePorNiveles(a, n));
+        AnalizadorArbol an = new AnalizadorArbol();
+        System.out.println("MaxTardanza: "+ an.devolverMaximoPromedio(a));
     }
 }
