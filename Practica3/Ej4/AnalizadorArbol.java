@@ -1,6 +1,4 @@
-package Practica3.Ej3;
-
-import java.util.LinkedList;
+package Practica3.Ej4;
 
 import Practica2.Queue;
 import Practica3.GeneralTree;

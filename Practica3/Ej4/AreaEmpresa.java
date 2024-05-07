@@ -1,4 +1,4 @@
-package Practica3.Ej3;
+package Practica3.Ej4;
 
 public class AreaEmpresa {
     private String identificacion;

@@ -3,7 +3,7 @@ package Practica3;
 import java.util.LinkedList;
 import java.util.List;
 
-import Practica3.Ej3.AnalizadorArbol;
+import Practica3.Ej4.AnalizadorArbol;
 
 public class Main {
     public static void main(String[] args) {

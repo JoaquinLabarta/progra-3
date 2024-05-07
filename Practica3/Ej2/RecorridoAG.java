@@ -66,7 +66,7 @@ public class RecorridoAG {
 
     public List<Integer> numerosImparesMayoresQuePorNiveles(GeneralTree<Integer> a, Integer n) {
         List<Integer> lista = new LinkedList<>();
-        if (a == null) {
+        if (a == null) {    
             return lista;
         }
 
