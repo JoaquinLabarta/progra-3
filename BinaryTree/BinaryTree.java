@@ -1,9 +1,3 @@
-/*Agregue a la clase BinaryTree los siguientes métodos:
-a) contarHojas():int Devuelve la cantidad de árbol/subárbol hojas del árbol receptor.
-b) espejo(): BinaryTree<T> Devuelve el árbol binario espejo del árbol receptor.
-c) entreNiveles(int n, m) Imprime el recorrido por niveles de los elementos del árbol
-receptor entre los niveles n y m (ambos inclusive). (0≤n<m≤altura del árbol) */
-package Practica2;
 
 public class BinaryTree<T> {
     private T data;
@@ -125,7 +119,7 @@ public class BinaryTree<T> {
     public void porNiveles(BinaryTree<T> arbol) {
 
         if (isEmpty()) {
-            System.out.println("El árbol está vacío.");
+            System.out.println("El arbol esta vacio.");
             return;
         }
 
@@ -154,7 +148,7 @@ public class BinaryTree<T> {
 
     public void entreNiveles(BinaryTree<T> arbol,int n, int m) {
         if (isEmpty()) {
-            System.out.println("El árbol está vacío.");
+            System.out.println("El arbol esta vacio.");
             return;
         }
     
@@ -188,5 +182,4 @@ public class BinaryTree<T> {
             }
         }
     }
-    
 }
